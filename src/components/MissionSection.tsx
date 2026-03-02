@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Eye, Rocket, User } from "lucide-react";
+import { Eye, Rocket } from "lucide-react";
 
 const team = [
 	{
@@ -104,9 +104,17 @@ const MissionSection = () => {
 							transition={{ duration: 0.5, delay: i * 0.15 }}
 							className="flex flex-col items-center text-center"
 						>
-							{/* Photo placeholder */}
-							<div className="w-40 h-40 md:w-48 md:h-48 rounded-xl bg-secondary border-2 border-border flex items-center justify-center mb-5 overflow-hidden">
-								<User className="w-16 h-16 text-muted-foreground/40" />
+							{/* Foto del miembro del equipo */}
+							<div className="w-48 h-48 md:w-56 md:h-56 rounded-xl bg-secondary border-2 border-border flex items-center justify-center mb-5 overflow-hidden shadow-lg shadow-black/10">
+								<img
+									src={
+										member.name === "Emilio Galli"
+											? "/EmilioGalli.jpeg"
+											: "/DiegoBruno.jpeg"
+									}
+									alt={member.name}
+									className="w-full h-full object-cover"
+								/>
 							</div>
 							<h4 className="text-lg font-heading font-bold">{member.name}</h4>
 							<p className="text-sm text-muted-foreground mt-1">
